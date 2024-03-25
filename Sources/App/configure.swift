@@ -7,9 +7,13 @@ import Vapor
 public func configure(_ app: Application) async throws {
     // uncomment to serve files from /Public folder
     // app.middleware.use(FileMiddleware(publicDirectory: app.directory.publicDirectory))
-
-app.databases.use(DatabaseConfigurationFactory.sqlite(.file("db.sqlite")), as: .sqlite)
-
+    let directory = DirectoryConfiguration.detect()
+    app.directory = directory
+    app.directory.publicDirectory = "Build/"
+    app.middleware.use(FileMiddleware(publicDirectory: app.directory.publicDirectory))
+    
+    app.databases.use(DatabaseConfigurationFactory.sqlite(.file("db.sqlite")), as: .sqlite)
+    
     app.migrations.add(CreateTodo())
     // register routes
     try routes(app)
