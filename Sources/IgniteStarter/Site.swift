@@ -22,16 +22,15 @@ struct ExampleSite: Site {
     var builtInIconsEnabled = true
     var syntaxHighlighters = [SyntaxHighlighter.swift, .python, .ruby]
     var feedConfiguration = FeedConfiguration(mode: .full, contentCount: 20, image: .init(url: "https://www.yoursite.com/images/icon32.png", width: 32, height: 32))
-//    var robotsConfiguration = Robots()
+    var robotsConfiguration = Robots()
     var author = "teda"
 
     var homePage = Home()
     var theme = MyTheme()
 
-    // markdownページを作らない場合は不要
-//    var layouts: [any ContentPage] {
-//        Story()
-//    }
+    var pages: [any StaticPage] {
+        ResultBuilder()
+    }
 }
 
 

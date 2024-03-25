@@ -18,18 +18,12 @@ struct Home: StaticPage {
         Text("This site is a demonstration of a wide variety of Ignite elements and components all in one place, so you can find code samples for your own sites.")
             .font(.lead)
 
-        Text("Key concepts")
+        Text("Contents")
             .font(.title2)
 
-        Text("Before you create sites yourself, you should review some key concepts that underpin how Ignite works:")
-
-//        List {
-//            Link("Grid Layout", target: GridExamples())
-//            Link("Navigation", target: NavigationExamples())
-//            Link("Content", target: ContentExamples())
-//            Link("Text", target: TextExamples())
-//            Link("Styling", target: StylingExamples())
-//        }
-//        .listStyle(.ordered(.default))
+        List {
+            Link("About ResultBuilder", target: ResultBuilder())
+        }
+        .listStyle(.ordered(.default))
     }
 }
