@@ -19,7 +19,7 @@ struct Vapor: StaticPage {
             .font(.lead)
         Text("Swiftでバックエンド、ウェブアプリのAPI、HTTP サーバーを書くことができます。最新のSwift機能とAPIを利用できます。")
         
-        Image("/images/figures/Vapor.png", description: "swiftUI")
+        Image("/images/figures/vapor.png", description: "swiftUI")
             .frame(maxWidth: 720)
         Text {
             Link("https://static.brokenhands.io/training/SwiftConnection-Vapor.pdf", target: "https://static.brokenhands.io/training/SwiftConnection-Vapor.pdf")
