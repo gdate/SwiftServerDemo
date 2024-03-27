@@ -23,6 +23,8 @@ struct Home: StaticPage {
 
         List {
             Link("About ResultBuilder", target: ResultBuilder())
+            Link("About Ignite", target: Ignite())
+            Link("About Vapor", target: Vapor())
         }
         .listStyle(.ordered(.default))
     }

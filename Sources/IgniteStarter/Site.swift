@@ -30,6 +30,8 @@ struct ExampleSite: Site {
 
     var pages: [any StaticPage] {
         ResultBuilder()
+        Ignite()
+        Vapor()
     }
 }
 
