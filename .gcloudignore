@@ -1,0 +1,10 @@
+*
+!Sources/**
+!Sources/App/**
+Sources/IgniteStarter/**
+!Assets/**
+!Content/**
+!Public/**
+!CloudRun/**
+!docker-compose.yml
+!Dockerfile

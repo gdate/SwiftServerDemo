@@ -2,13 +2,13 @@ import Fluent
 import Vapor
 
 func routes(_ app: Application) throws {
-    app.get { req async in
-        req.fileio.streamFile(at: "\(req.application.directory.publicDirectory)index.html")
-    }
+//    app.get { req async in
+//        req.fileio.streamFile(at: "\(req.application.directory.publicDirectory)index.html")
+//    }
     
     app.get("**") { req -> EventLoopFuture<Response> in
         // パスを取得
-        guard let path = req.url.path.removingPercentEncoding else {
+        guard let path = req.url.path.removingPercentEncoding?.replacingOccurrences(of: "/", with: "") else {
             throw Abort(.internalServerError)
         }
         

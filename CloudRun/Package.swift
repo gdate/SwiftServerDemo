@@ -13,8 +13,6 @@ let package = Package(
         .package(url: "https://github.com/vapor/fluent.git", from: "4.8.0"),
         // 🪶 Fluent driver for SQLite.
         .package(url: "https://github.com/vapor/fluent-sqlite-driver.git", from: "4.0.0"),
-        // Ignite
-        .package(url: "https://github.com/gdate/Ignite.git", branch: "feature/buildDirectory-changeable")
     ],
     targets: [
         .executableTarget(
@@ -24,21 +22,6 @@ let package = Package(
                 .product(name: "FluentSQLiteDriver", package: "fluent-sqlite-driver"),
                 .product(name: "Vapor", package: "vapor")
             ]
-        ),
-        .executableTarget(
-            name: "IgniteStarter",
-            dependencies: [
-                .product(name: "Ignite", package: "Ignite")
-            ]
-        ),
-        .testTarget(name: "AppTests", dependencies: [
-            .target(name: "App"),
-            .product(name: "XCTVapor", package: "vapor"),
-
-            // Workaround for https://github.com/apple/swift-package-manager/issues/6940
-            .product(name: "Vapor", package: "vapor"),
-            .product(name: "Fluent", package: "Fluent"),
-            .product(name: "FluentSQLiteDriver", package: "fluent-sqlite-driver"),
-        ])
+        )
     ]
 )

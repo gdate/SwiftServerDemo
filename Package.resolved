@@ -57,10 +57,10 @@
     {
       "identity" : "ignite",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/twostraws/Ignite.git",
+      "location" : "https://github.com/gdate/Ignite.git",
       "state" : {
-        "branch" : "main",
-        "revision" : "a9ba647e7a0ac76b2df9f9e37358f76605aaae85"
+        "branch" : "feature/buildDirectory-changeable",
+        "revision" : "8d4ebcc80dcf723597a921d6893da172c2b0114f"
       }
     },
     {

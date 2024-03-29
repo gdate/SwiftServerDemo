@@ -7,7 +7,7 @@ struct IgniteWebsite {
         let site = ExampleSite()
 
         do {
-            try site.publish()
+            try site.publish(buildDirectoryPath: "Public")
         } catch {
             print(error.localizedDescription)
         }
