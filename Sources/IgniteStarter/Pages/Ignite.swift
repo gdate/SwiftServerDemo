@@ -21,7 +21,7 @@ struct Ignite: StaticPage {
         
         Text("Igniteは、SwiftUIコードをHTMLに変換しようとしたり、単にHTMLタグをSwiftコードにマッピングしようとすることはありません。代わりに、HTMLやCSSの知識がなくても、SwiftUIに似た構文を使用して素晴らしいウェブサイトを構築するのを手助けすることを目指しています。")
         
-        Text("ResultBuilderによってHTMLやCSSの記述をSwiftUIのような構文に置き換え、結果として得られたHTMLやCSSをWebページに必要な構成要素を含んだものをBuildフォルダに出力します。")
+        Text("ResultBuilderによってHTMLやCSSの記述をSwiftUIのような構文に置き換え、結果として得られたHTMLやCSSなどWebページに必要な構成要素を含んだものをBuildフォルダに出力します。")
         
         Text {
             Link("Ignite on GitHub", target: "https://github.com/twostraws/Ignite")
@@ -49,6 +49,12 @@ struct Ignite: StaticPage {
                 .padding()
         }
         """)
+        
+        Text("Igniteを実行すると以下コードが生成されます。")
+        
+        Image("/images/figures/generatedCode.png")
+            .accessibilityLabel("Generated Code")
+            .frame(maxWidth: 720)
         
         Image("/images/figures/codeExample.png")
             .accessibilityLabel("Ignite Code Example")
