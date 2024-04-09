@@ -1,6 +1,6 @@
 //
 //  File.swift
-//  
+//
 //
 //  Created by teda on 2024/03/26.
 //
@@ -12,7 +12,7 @@ struct Vapor: StaticPage {
     var title = "Vapor"
 
     func body(context: PublishingContext) -> [BlockElement] {
-        Text("What is Vapor?")
+        Text("Vaporとは")
             .font(.title1)
         
         Text("VaporとはTanner NelsonとLogan Wrightによって作られたオープンソースWebフレームワークです。")
@@ -32,7 +32,7 @@ struct Vapor: StaticPage {
         Text("Leaf").font(.title2)
         Text("LeafはVaporのテンプレートエンジンであり、動的なHTMLやその他のコンテンツを生成するために使用されます。")
         
-        Text("Why Vapor?")
+        Text("Vaporを選ぶメリット")
             .font(.title1)
         List {
             Text("Xcodeでのデバッグサポートが受けられる")
@@ -40,6 +40,11 @@ struct Vapor: StaticPage {
             Text("少ないメモリリソースで多くのリクエストを処理できる")
             Text("Swiftを使っているので型安全")
         }
+        
+        Text("Let's try it! 🚀")
+            .font(.title1)
+        Embed(title: "vapor workshop", url: "https://static.brokenhands.io/training/SwiftConnection-Vapor.pdf")
+            .aspectRatio(.r4x3)
     }
 }
 

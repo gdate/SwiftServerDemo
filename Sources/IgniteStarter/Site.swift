@@ -32,6 +32,7 @@ struct ExampleSite: Site {
         ResultBuilder()
         Ignite()
         Vapor()
+        CloudRun()
     }
 }
 
