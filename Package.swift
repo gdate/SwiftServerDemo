@@ -14,7 +14,7 @@ let package = Package(
         // 🪶 Fluent driver for SQLite.
         .package(url: "https://github.com/vapor/fluent-sqlite-driver.git", from: "4.0.0"),
         // Ignite
-        .package(url: "https://github.com/gdate/Ignite.git", branch: "feature/buildDirectory-changeable")
+        .package(url: "https://github.com/twostraws/Ignite.git", branch: "main")
     ],
     targets: [
         .executableTarget(
