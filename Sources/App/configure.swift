@@ -9,7 +9,7 @@ public func configure(_ app: Application) async throws {
     // app.middleware.use(FileMiddleware(publicDirectory: app.directory.publicDirectory))
 //    let directory = DirectoryConfiguration.detect()
 //    app.directory = directory
-//    app.directory.publicDirectory = "Root/"
+//    app.directory.publicDirectory = "Build/"
     app.middleware.use(FileMiddleware(publicDirectory: app.directory.publicDirectory, defaultFile: "index.html"))
     
     app.databases.use(DatabaseConfigurationFactory.sqlite(.file("db.sqlite")), as: .sqlite)

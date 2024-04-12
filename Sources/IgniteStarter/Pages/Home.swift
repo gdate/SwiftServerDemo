@@ -53,26 +53,9 @@ struct Home: StaticPage {
             .backgroundOpacity(0.2)
         }
         
-//        Text("Welcome to ExampleSite!")
-//            .font(.title1)
-        
-        Text("Contents")
+        Text("Main Contents")
             .font(.title3)
             .padding()
-
-//        Text("This site is a demonstration of a wide variety of Ignite elements and components all in one place, so you can find code samples for your own sites.")
-//            .font(.lead)
-//        Text("このサイトはIgniteとVaporによって作られています。このサイトを作るにあたって必要なのはSwiftの知識だけ！一緒にSwiftの無限のパワーを体験しましょう！")
-//
-//        Text("Contents")
-//            .font(.title2)
-
-//        List {
-//            Link("About ResultBuilder", target: ResultBuilder())
-//            Link("About Ignite", target: Ignite())
-//            Link("About Vapor", target: Vapor())
-//        }
-//        .listStyle(.ordered(.default))
         
         Section {
             Card(imageName: "/images/logos/resultBuilderLogo.png") {

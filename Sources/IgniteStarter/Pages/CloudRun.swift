@@ -15,7 +15,7 @@ struct CloudRun: StaticPage {
         Text("Cloud Runとは")
             .font(.title1)
         
-        Text("Cloud Runとはコンテナを使用して、任意の言語やフレームワークで記述されたWebアプリケーションやAPIを簡単にデプロイできるようにするものです。")
+        Text("Cloud RunとはDockerコンテナを使用して、任意の言語やフレームワークで記述されたWebアプリケーションやAPIをパッケージ化し、Googleのインフラストラクチャー上で実行するためのサービスです。")
             .font(.lead)
         Text("今回はサーバサイドのWebアプリケーション開発フレームワークであるVaporをつかってSwiftで書いたバックエンドコードをCloud Runにデプロイします。")
         Text("全体の流れは以下です。")
