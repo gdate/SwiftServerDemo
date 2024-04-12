@@ -18,7 +18,7 @@ let package = Package(
     ],
     targets: [
         .executableTarget(
-            name: "App",
+            name: "WebServer",
             dependencies: [
                 .product(name: "Fluent", package: "fluent"),
                 .product(name: "FluentSQLiteDriver", package: "fluent-sqlite-driver"),
@@ -26,13 +26,13 @@ let package = Package(
             ]
         ),
         .executableTarget(
-            name: "IgniteStarter",
+            name: "WebSiteGenerator",
             dependencies: [
                 .product(name: "Ignite", package: "Ignite")
             ]
         ),
-        .testTarget(name: "AppTests", dependencies: [
-            .target(name: "App"),
+        .testTarget(name: "WebServerTests", dependencies: [
+            .target(name: "WebServer"),
             .product(name: "XCTVapor", package: "vapor"),
 
             // Workaround for https://github.com/apple/swift-package-manager/issues/6940
