@@ -1,7 +1,7 @@
 *
 !Sources/**
-!Sources/App/**
-Sources/IgniteStarter/**
+!Sources/WebServer/**
+Sources/WebSiteGenerator/**
 !Assets/**
 !Content/**
 !Public/**
