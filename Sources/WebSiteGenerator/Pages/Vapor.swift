@@ -15,7 +15,7 @@ struct Vapor: StaticPage {
         Text("Vaporとは")
             .font(.title1)
         
-        Text("VaporとはTanner NelsonとLogan Wrightによって作られたオープンソースWebフレームワークです。")
+        Text("VaporとはTanner NelsonとLogan Wrightによって作られたSwift言語で記述されたWebアプリケーションフレームワークです。")
             .font(.lead)
         Text("Swiftでバックエンド、ウェブアプリのAPI、HTTP サーバーを書くことができます。最新のSwift機能とAPIを利用できます。")
         

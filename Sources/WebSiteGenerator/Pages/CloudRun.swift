@@ -12,20 +12,21 @@ struct CloudRun: StaticPage {
     var title = "CloudRun"
 
     func body(context: PublishingContext) -> [BlockElement] {
-        Text("Cloud Runとは")
+        Text("Google Cloud Runとは")
             .font(.title1)
         
-        Text("Cloud RunとはDockerコンテナを使用して、任意の言語やフレームワークで記述されたWebアプリケーションやAPIをパッケージ化し、Googleのインフラストラクチャー上で実行するためのサービスです。")
+        Text("Google Cloud RunとはDockerコンテナを使用して、任意の言語やフレームワークで記述されたWebアプリケーションやAPIをパッケージ化し、Googleのインフラストラクチャー上で実行するためのサービスです。")
             .font(.lead)
-        Text("今回はサーバサイドのWebアプリケーション開発フレームワークであるVaporをつかってSwiftで書いたバックエンドコードをCloud Runにデプロイします。")
+        Text("Google Cloud Runを選択した理由は、上述の通りプログラミング言語の制限がないからです。例えば Google Cloud Functions を使用する場合、使用できるランタイムは Node.js、Python、Go、Java、Ruby、PHP、.Net Core です。つまり、Cloud Functions では Swift で実装することができません。")
+        Text("今回はサーバサイドのWebアプリケーション開発フレームワークであるVaporをつかってSwiftで書いたバックエンドコードをGoogle Cloud Runにデプロイします。")
         Text("全体の流れは以下です。")
         
         List {
             Link("プロジェクトを作成", target: "#step1")
-            Link("gcloud CLI をインストールする", target: "#step2")
-            Link("gcloud CLI を初期化", target: "#step3")
+            Link("コマンドラインツールをインストールする", target: "#step2")
+            Link("コマンドラインツールを初期化", target: "#step3")
             Link("プロジェクトを設定", target: "#step4")
-            Link("ソースから Cloud Run にデプロイ", target: "#step5")
+            Link("Google Cloud Run にデプロイ", target: "#step5")
             
         }.listStyle(.ordered(.default))
         
@@ -34,8 +35,8 @@ struct CloudRun: StaticPage {
         Text {
             Link("https://cloud.google.com/resource-manager/docs/creating-managing-projects?hl=ja#console", target: "https://cloud.google.com/resource-manager/docs/creating-managing-projects?hl=ja#console")
         }
-        Text("gcloud CLI をインストールする").font(.title2).id("step2")
-        Text("macユーザーであれば以下リンクからCLIを入手")
+        Text("コマンドラインツールをインストールする").font(.title2).id("step2")
+        Text("macユーザーであれば以下リンクからコマンドラインツールを入手")
         Text {
             Link("https://cloud.google.com/sdk/docs/install?hl=ja#mac", target: "https://cloud.google.com/sdk/docs/install?hl=ja#mac")
         }
@@ -50,7 +51,7 @@ struct CloudRun: StaticPage {
 
         Do you want to continue (Y/n)?  y
         """)
-        Text("gcloud CLI を初期化").font(.title2).id("step3")
+        Text("コマンドラインツールを初期化").font(.title2).id("step3")
         CodeBlock(language: "shell", """
         $ gcloud init
         """)
@@ -74,7 +75,8 @@ struct CloudRun: StaticPage {
         disable_usage_reporting = True
         project = xxx
         """)
-        Text("ソースから Cloud Run にデプロイ").font(.title2).id("step5")
+        Text("Google Cloud Run にデプロイ").font(.title2).id("step5")
+        Text("今回はソースから直接デプロイをします。この方法ではソースコードからコンテナイメージが自動的にビルドされて、デプロイされます。")
         CodeBlock(language: "shell", """
         // プロジェクトのルートディレクトリ
         $ gcloud run deploy
