@@ -17,8 +17,8 @@ struct CloudRun: StaticPage {
         
         Text("Google Cloud RunとはDockerコンテナを使用して、任意の言語やフレームワークで記述されたWebアプリケーションやAPIをパッケージ化し、Googleのインフラストラクチャー上で実行するためのサービスです。")
             .font(.lead)
-        Text("Google Cloud Runを選択した理由は、上述の通りプログラミング言語の制限がないからです。例えば Google Cloud Functions を使用する場合、使用できるランタイムは Node.js、Python、Go、Java、Ruby、PHP、.Net Core です。つまり、Cloud Functions では Swift で実装することができません。")
-        Text("今回はサーバサイドのWebアプリケーション開発フレームワークであるVaporをつかってSwiftで書いたバックエンドコードをGoogle Cloud Runにデプロイします。")
+        Text("今回WebページのデプロイにGoogle Cloud Runを選択した理由は、上述の通りプログラミング言語の制限がないからです。例えば Google Cloud Functions を使用する場合、使用できるランタイムは Node.js、Python、Go、Java、Ruby、PHP、.Net Core です。つまり、Cloud Functions では Swift で実装することができません。")
+        Text("また、今回はサーバサイドのWebアプリケーション開発フレームワークであるVaporをつかってSwiftで書いたバックエンドコードをGoogle Cloud Runにデプロイします。")
         Text("全体の流れは以下です。")
         
         List {
