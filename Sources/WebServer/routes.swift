@@ -19,8 +19,7 @@ func routes(_ app: Application) throws {
     
     // Returning JSON
     app.get("bottles", ":count") { req -> Bottles in
-        let count =
-        try req.parameters.require("count", as: Int.self)
+        let count = try req.parameters.require("count", as: Int.self)
         return Bottles(count: count)
     }
     
@@ -61,7 +60,7 @@ func routes(_ app: Application) throws {
             .encodeResponse(for: req)
     }
 
-    try app.register(collection: TodoController())
+    try app.register(collection: UserController())
 }
 
 struct Bottles: Content {
