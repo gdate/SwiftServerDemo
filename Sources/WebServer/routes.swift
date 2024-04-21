@@ -3,7 +3,7 @@ import Vapor
 
 func routes(_ app: Application) throws {
     app.get { req async in
-        req.fileio.streamFile(at: "\(req.application.directory.publicDirectory)index.html")
+        req.fileio.streamFile(at: "\(req.application.directory.publicDirectory)")
     }
     
     // Hello Workshop
